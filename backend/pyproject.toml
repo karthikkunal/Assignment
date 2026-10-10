@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantumgenie-local-api"
+version = "0.1.0"
+description = "Local orchestration and evidence API for QuantumGenie Discovery"
+requires-python = ">=3.11"
+dependencies = [
+    "aiosqlite>=0.20,<1",
+    "apscheduler>=3.11,<4",
+    "fastapi>=0.115,<1",
+    "httpx>=0.28,<1",
+    "pydantic-settings>=2.7,<3",
+    "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<10",
+    "pytest-asyncio>=0.25,<2",
+    "ruff>=0.9,<1",
+]
+
+[project.scripts]
+quantumgenie-api = "app.main:run"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
