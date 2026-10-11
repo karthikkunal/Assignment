@@ -1,4 +1,4 @@
-# QuantumGenie Discovery
+# Genie Discovery
 
 Local certificate inventory and TLS metadata discovery for Windows. The product combines a small Go endpoint agent, a FastAPI orchestration API, SQLite evidence history, and a React reporting interface.
 
