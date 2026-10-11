@@ -164,6 +164,3 @@ Dependencies are pinned by `frontend/package-lock.json` and bounded in `backend/
 
 GitHub Copilot was used to assist implementation, testing, and documentation. The repository contains no generated evidence presented as live discovery data. All included code and behavior remain reviewable, testable, and modifiable by the submitter.
 
-## Demonstration
-
-Use the concise [five-minute demonstration script](docs/DEMO.md). It covers installation, both manual scan buttons, completed reports, the relationship map, and periodic scheduling in the required order.
